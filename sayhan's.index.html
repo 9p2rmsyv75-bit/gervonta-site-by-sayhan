@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Биография Gervonta “Tank” Davis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #eef8ff;
+            margin: 20px;
+        }
+        h1 {
+            color: #222;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 10px auto;
+            color: #333;
+        }
+        .slider img {
+            width: 400px;
+            border-radius: 12px;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        .slider img:hover {
+            transform: scale(1.05);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ff4500;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff6633;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gervonta “Tank” Davis 🥊</h1>
+
+    <p><strong>Дата рождения:</strong> 7 ноября 1994, Балтимор, Мэриленд, США</p>
+
+    <p>Gervonta Davis — профессиональный американский боксер, многократный чемпион мира в лёгких весах. Он известен своей невероятной ударной мощью, скоростью и высоким процентом побед нокаутом.</p>
+
+    <h2>Ранние годы</h2>
+    <p>Davis вырос в Балтиморе в непростой обстановке. Начал заниматься боксом с 5 лет и быстро показал талант, выиграв множество любительских соревнований, включая национальные турниры.</p>
+
+    <h2>Чемпионская карьера</h2>
+    <p>Tank выиграл титулы в супер‑перо и лёгком весе, известен своими боями с топ-соперниками, включая Ryan Garcia. Он считается одним из лучших бойцов pound-for-pound в мире.</p>
+
+    <h2>Личная жизнь</h2>
+    <p>В 2023 году принял ислам и взял имя Abdul Wahid. У него есть дети. Вне ринга встречались правовые проблемы, но это не помешало его успехам в боксе.</p>
+
+    <h2>Фотографии в ринге</h2>
+    <div class="slider">
+        <img id="sliderImage" src="https://upload.wikimedia.org/wikipedia/commons/9/92/Gervonta_Davis_vs_Frank_Martin_2024.jpg" alt="Gervonta Davis в ринге">
+    </div>
+
+    <script>
+        const images = [
+            "https://upload.wikimedia.org/wikipedia/commons/9/92/Gervonta_Davis_vs_Frank_Martin_2024.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/9/9d/Gervonta_Davis_vs_Lamont_Roach_Boxing.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/3/30/Gervonta_Davis_Boxing_Action.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/6/66/Gervonta_Davis_Ring_Action.jpg"
+        ];
+        let currentIndex = 0;
+
+        // Функция автоматической смены фото каждые 3 секунды
+        setInterval(() => {
+            currentIndex++;
+            if(currentIndex >= images.length) currentIndex = 0;
+            document.getElementById("sliderImage").src = images[currentIndex];
+        }, 3000);
+    </script>
+
+</body>
+</html>
